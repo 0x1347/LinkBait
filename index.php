@@ -27,6 +27,7 @@ if (isset($_POST['k']) && isset($_POST['v'])){ // If the browser is POSTING the 
     } 
 
     file_put_contents($_SESSION['fileName'], $_POST['k'] . ": " . $_POST['v'] . "\n", FILE_APPEND | LOCK_EX);
+    debug_to_console($_POST['k'] . ": " . $_POST['v'] . "\n");
     return;
 }
 
